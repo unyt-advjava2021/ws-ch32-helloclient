@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://ws.eltonb.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.eltonb.com/">
+
+<xs:element name="complexHello" type="tns:complexHello" />
+
+<xs:element name="complexHelloResponse" type="tns:complexHelloResponse" />
+
+<xs:element name="hi" type="tns:hi" />
+
+<xs:element name="hiResponse" type="tns:hiResponse" />
+
+<xs:complexType name="complexHello">
+<xs:sequence>
+<xs:element name="HelloRequest" type="tns:helloRequest" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloRequest">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="surname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="complexHelloResponse">
+<xs:sequence>
+<xs:element name="HelloResponse" type="tns:helloResponse" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="error" type="tns:error" minOccurs="0" />
+<xs:element name="greeting" type="xs:string" minOccurs="0" />
+<xs:element name="success" type="xs:boolean" />
+<xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="error">
+<xs:sequence>
+<xs:element name="code" type="xs:string" minOccurs="0" />
+<xs:element name="explanation" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hi">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hiResponse">
+<xs:sequence>
+<xs:element name="greeting" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
